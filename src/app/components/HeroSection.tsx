@@ -106,7 +106,7 @@ const HeroSection = () => {
             <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
             <motion.div
                 
-                className="flex flex-row justify-center place-items-center text-center bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
+                className="flex flex-row justify-center place-items-center text-center text-black bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
                 variants={featureVariants}
                 whileHover="hover"
               
@@ -120,7 +120,7 @@ const HeroSection = () => {
             </motion.div>
             <motion.div
                 
-                className="flex flex-row justify-center place-items-center text-center bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
+                className="flex flex-row justify-center place-items-center text-center text-black bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
                 variants={featureVariants}
                 whileHover="hover"
               
@@ -134,7 +134,7 @@ const HeroSection = () => {
             </motion.div>
             <motion.div
                 
-                className="flex flex-row justify-center place-items-center text-center bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
+                className="flex flex-row justify-center place-items-center text-center text-black bg-[#c1ff72] py-3 px-2 rounded-lg font-medium"
                 variants={featureVariants}
                 whileHover="hover"
               
