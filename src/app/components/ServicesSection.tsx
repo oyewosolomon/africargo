@@ -26,9 +26,9 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl bg-white mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid md:grid-cols-2 gap-12">
-        <div className=''>
+        <div className='text-black'>
           <h2 className="text-lime-600 font-bold mb-4 uppercase tracking-wide">Why Africargo</h2>
           <h3 className="text-4xl font-bold mb-6">Why should you choose our services, here are the advantages we offer</h3>
           <p className="text-gray-600 mb-8">

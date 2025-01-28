@@ -63,7 +63,7 @@ const HeroSection = () => {
     <Nav/>
       {/* Rest of the hero section remains the same */}
       <div className="relative flex flex-col">
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid md:grid-cols-2 gap-12 text-black items-center mb-16">
            <motion.div variants={containerVariants}>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
               Effortless Logistics, Elevated Performance.
