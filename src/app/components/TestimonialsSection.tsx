@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-6xl px-4">
           <div className="grid grid-cols-1 md:grid-cols-3  gap-6">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+              <div key={index} className="bg-white text-black p-6 rounded-lg shadow-lg">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}

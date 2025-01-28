@@ -43,11 +43,11 @@ const Nav = () => {
           
           {/* Mobile menu button */}
           <button 
-            className="md:hidden p-2"
+            className="md:hidden text-black p-2"
             onClick={toggleSidebar}
             aria-label="Toggle menu"
           >
-            <Menu size={24} />
+            <Menu size={24} className='text-black' />
           </button>
   
           {/* Desktop navigation */}
