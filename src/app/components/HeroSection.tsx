@@ -1,8 +1,17 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 
 const HeroSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <nav className="flex items-center justify-between mb-16">
@@ -18,6 +27,16 @@ const HeroSection = () => {
           </Link>
         </div>
         
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden p-2"
+          onClick={toggleSidebar}
+          aria-label="Toggle menu"
+        >
+          <Menu size={24} />
+        </button>
+
+        {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Home</a>
           <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">About us</a>
@@ -28,12 +47,48 @@ const HeroSection = () => {
             Get in touch
           </a>
         </div>
+
+        {/* Mobile sidebar */}
+        <div className={`
+          fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
+          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+          md:hidden
+        `}>
+          <div className="p-4">
+            <button 
+              className="mb-8 p-2"
+              onClick={toggleSidebar}
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+            <div className="flex flex-col space-y-6">
+              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Home</a>
+              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">About us</a>
+              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Track shipment</a>
+              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
+              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">FAQ</a>
+              <a href="#" className="bg-[#c1ff72] px-6 py-2 rounded-full font-bold text-center">
+                Get in touch
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Overlay */}
+        {isOpen && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            onClick={toggleSidebar}
+          />
+        )}
       </nav>
 
+      {/* Rest of the hero section remains the same */}
       <div className="relative flex flex-col">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <h1 className="text-5xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
               Effortless Logistics, Elevated Performance.
             </h1>
             <p className="text-gray-600 text-lg mb-8">
@@ -64,11 +119,10 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Centered features grid */}
         <div className="max-w-4xl mx-auto w-full">
-          <div className="grid grid-cols-3 gap-4">
-          <div className="flex flex-row justify-center place-items-center text-center bg-[#c1ff72] py-3 px-2 rounded-lg text-center font-medium">
-          <div className='px-2'>
+            <div className="grid grid-rows-3 md:grid-cols-3 gap-4">
+            <div className="flex flex-row justify-center place-items-center text-center bg-[#c1ff72] py-3 px-2 rounded-lg text-center font-medium">
+            <div className='px-2'>
                     <svg fill="#000000" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M8.5,6H6.7C8.2,4.7,10,4,12,4c0.3,0,0.6,0,0.9,0.1c0,0,0,0,0,0c0.5,0.1,1-0.3,1.1-0.9c0.1-0.5-0.3-1-0.9-1.1C12.7,2,12.4,2,12,2C9.6,2,7.3,2.9,5.5,4.4V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v4c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1S9.1,6,8.5,6z M7,14.5c-0.6,0-1,0.4-1,1v1.8C4.7,15.8,4,14,4,12c0-0.3,0-0.6,0.1-0.9c0,0,0,0,0,0c0.1-0.5-0.3-1-0.9-1.1c-0.5-0.1-1,0.3-1.1,0.9C2,11.3,2,11.6,2,12c0,2.4,0.9,4.7,2.4,6.5H3c-0.6,0-1,0.4-1,1s0.4,1,1,1h4c0.3,0,0.6-0.2,0.8-0.4c0,0,0,0,0,0c0,0,0,0,0,0c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.1,0-0.2c0,0,0-0.1,0-0.1v-4C8,14.9,7.6,14.5,7,14.5z M21,5.5c0.6,0,1-0.4,1-1s-0.4-1-1-1h-4c-0.1,0-0.1,0-0.2,0c0,0,0,0,0,0c-0.1,0-0.2,0.1-0.3,0.1c0,0,0,0,0,0c-0.1,0.1-0.2,0.1-0.2,0.2c0,0,0,0,0,0c0,0,0,0,0,0c0,0.1-0.1,0.2-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0,0,0.1,0,0.1v4c0,0.6,0.4,1,1,1s1-0.4,1-1V6.7c1.3,1.4,2,3.3,2,5.3c0,0.3,0,0.6-0.1,0.9c-0.1,0.5,0.3,1,0.9,1.1c0,0,0.1,0,0.1,0c0.5,0,0.9-0.4,1-0.9c0-0.4,0.1-0.7,0.1-1.1c0-2.4-0.9-4.7-2.4-6.5H21z M20.3,16.5c-0.1-0.1-0.2-0.2-0.3-0.3c0,0,0,0,0,0c0,0,0,0,0,0c-0.1-0.1-0.2-0.1-0.3-0.1c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0h-4c-0.6,0-1,0.4-1,1s0.4,1,1,1h1.8c-1.4,1.3-3.3,2-5.3,2c-0.3,0-0.6,0-0.9-0.1c0,0,0,0,0,0c-0.5-0.1-1,0.3-1.1,0.9s0.3,1,0.9,1.1c0.4,0,0.7,0.1,1.1,0.1c2.4,0,4.7-0.9,6.5-2.4V21c0,0.6,0.4,1,1,1s1-0.4,1-1v-4C20.5,16.8,20.4,16.6,20.3,16.5C20.3,16.5,20.3,16.5,20.3,16.5z"></path></g></svg>
                 </div>
                 <div>
