@@ -70,7 +70,7 @@ const Nav = () => {
           `}>
             <div className="p-4">
               <button 
-                className="mb-8 p-2"
+                className="mb-8 p-2 text-black"
                 onClick={toggleSidebar}
                 aria-label="Close menu"
               >
@@ -82,7 +82,7 @@ const Nav = () => {
                 <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Track shipment</a>
                 <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
                 <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">FAQ</a>
-                <a href="#" className="bg-[#c1ff72] px-6 py-2 rounded-full font-bold text-center">
+                <a href="#" className="bg-[#c1ff72] text-black px-6 py-2 rounded-full font-bold text-center">
                   Get in touch
                 </a>
               </div>

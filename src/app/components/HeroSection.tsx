@@ -72,7 +72,7 @@ const HeroSection = () => {
               Get competitive rates and reliable service, no matter where you&apos;re shipping or how much you&apos;re sending.
             </p>
             <div className="flex items-center space-x-6">
-              <a href="#" className="bg-[#c1ff72] px-8 py-3 rounded-full font-medium">
+              <a href="#" className="bg-[#c1ff72] text-black px-8 py-3 rounded-full font-medium">
                 Start now
               </a>
               <a href="#" className="flex items-center text-gray-700 font-medium">
