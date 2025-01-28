@@ -37,7 +37,7 @@ const HeroSection = () => {
               Effortless Logistics, Elevated Performance.
             </h1>
             <p className="text-gray-600 text-lg mb-8">
-              Get competitive rates and reliable service, no matter where you're shipping or how much you're sending.
+              Get competitive rates and reliable service, no matter where you&apos;re shipping or how much you&apos;re sending.
             </p>
             <div className="flex items-center space-x-6">
               <a href="#" className="bg-[#c1ff72] px-8 py-3 rounded-full font-medium">

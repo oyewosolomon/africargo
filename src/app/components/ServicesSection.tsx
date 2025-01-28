@@ -32,7 +32,7 @@ const ServicesSection = () => {
           <h2 className="text-lime-600 font-bold mb-4 uppercase tracking-wide">Why Africargo</h2>
           <h3 className="text-4xl font-bold mb-6">Why should you choose our services, here are the advantages we offer</h3>
           <p className="text-gray-600 mb-8">
-            We take great pride in offering the best shipping and transportation services available anywhere in the world, utilizing software for tracking, processing, and communications, along with our knowledgeable staff's decades of experience!
+            We take great pride in offering the best shipping and transportation services available anywhere in the world, utilizing software for tracking, processing, and communications, along with our knowledgeable staff&apos;s decades of experience!
           </p>
           <button className="bg-lime-500 text-white px-8 py-3 rounded-lg hover:bg-lime-600 transition-colors">
             Get a Free Quote
