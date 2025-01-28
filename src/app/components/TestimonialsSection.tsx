@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       {/* Hero Section */}
       <div className="relative h-[600px] bg-gray-100">
         {/* Background Image */}

@@ -30,7 +30,7 @@ const Usecase = () => {
 
   return (
     <section className="py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto bg-white text-black">
         {/* Header */}
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl font-bold">Built for Every Business, <br /> Perfect for You</h2>

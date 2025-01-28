@@ -39,7 +39,7 @@ const ServicesSection = () => {
           </button>
         </div>
 
-        <div className="grid gap-12">
+        <div className="grid gap-12 bg-white text-black">
           {services.map((service, index) => (
             <div key={index} className="flex items-start gap-4">
               <div className="flex-shrink-0">
