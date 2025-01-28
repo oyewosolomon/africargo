@@ -1,17 +1,12 @@
 "use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import Nav from './Nav';
 
 const HeroSection = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,17 +19,7 @@ const HeroSection = () => {
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
+
 
 
   const featureVariants = {
@@ -75,80 +60,7 @@ const HeroSection = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <nav className="flex items-center justify-between mb-16">
-      <motion.div 
-          className="flex items-center"
-          variants={itemVariants}
-        >
-          <Link href="/">
-            <Image 
-              src="/assets/logo-2.png" 
-              alt="Africargo" 
-              width={140} 
-              height={30}
-              className="object-contain"
-            />
-          </Link>
-        </motion.div>
-        
-        {/* Mobile menu button */}
-        <button 
-          className="md:hidden p-2"
-          onClick={toggleSidebar}
-          aria-label="Toggle menu"
-        >
-          <Menu size={24} />
-        </button>
-
-        {/* Desktop navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Home</a>
-          <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">About us</a>
-          <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Track shipment</a>
-          <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
-          <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">FAQ</a>
-          <a href="#" className="bg-[#c1ff72] px-6 py-2 rounded-full font-bold">
-            Get in touch
-          </a>
-        </div>
-
-        {/* Mobile sidebar */}
-        <div className={`
-          fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
-          ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-          md:hidden
-        `}>
-          <div className="p-4">
-            <button 
-              className="mb-8 p-2"
-              onClick={toggleSidebar}
-              aria-label="Close menu"
-            >
-              <X size={24} />
-            </button>
-            <div className="flex flex-col space-y-6">
-              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Home</a>
-              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">About us</a>
-              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Track shipment</a>
-              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
-              <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">FAQ</a>
-              <a href="#" className="bg-[#c1ff72] px-6 py-2 rounded-full font-bold text-center">
-                Get in touch
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Overlay */}
-        
-        {isOpen && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-            onClick={toggleSidebar}
-          />
-        )}
-      </nav>
-
+    <Nav/>
       {/* Rest of the hero section remains the same */}
       <div className="relative flex flex-col">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
