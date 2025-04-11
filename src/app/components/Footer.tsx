@@ -76,18 +76,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-black/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            {/* Address */}
-            <div className="text-sm">
-              2118 Thornridge Cir. Syracuse,<br />
-              Connecticut 35624
-            </div>
-
-            {/* Contact Info */}
-            <div className="text-sm">
-              <div>ship@africargo.com</div>
-              <div>07 88 07 07 02</div>
-            </div>
-
+           
             {/* Legal Links and Social */}
             <div className="flex flex-col md:items-end gap-4">
              
