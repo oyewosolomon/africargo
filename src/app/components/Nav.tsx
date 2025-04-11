@@ -55,8 +55,7 @@ const Nav = () => {
             <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Home</a>
             <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">About us</a>
             <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Track shipment</a>
-            <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
-            <a href="#" className="text-gray-700 hover:text-lime-400 font-bold">FAQ</a>
+            <a href="#contact-us" className="text-gray-700 hover:text-lime-400 font-bold">Contact us</a>
             <a href="#" className="bg-[#c1ff72] px-6 py-2 rounded-full font-bold">
               Get in touch
             </a>
